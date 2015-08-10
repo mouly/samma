@@ -1,0 +1,20 @@
+<html>
+<head>
+<title>Samma</title>
+<link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
+<link rel="stylesheet" href="index.css">
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-timer/dist/angular-timer.js"></script>
+<script src="timer.js"></script>
+</head>
+<body ng-app="samma" ng-controller="MainCtrl">
+	<h2 class="center">
+		<timer interval="1000" countdown="60" auto-start="false">{{countdown}}</timer>
+	</h2>
+  <ul class="center">
+  	<li><button ng-click="startTimer()" ng-disabled="timerRunning">Start</button></li>
+  	<li><button ng-click="stopTimer()" ng-disabled="!timerRunning">Stop</button></li>
+  	<li><button ng-click="quitApp()">Quit</button></li>
+  </ul>
+</body>
+</html>
